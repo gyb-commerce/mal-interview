@@ -53,7 +53,7 @@ class MurabahaContract:
 
     @property
     def outstanding(self) -> float:
-        return self.sale_price - self.installments_paid * self.installment_amount
+        return self.sale_price - self.installments_paid * self.installment_amount # The brackets should be there to follow
 
 
 @dataclass
@@ -62,7 +62,7 @@ class Installment:
     number: int
     due_date: date
     due_amount: float
-    status: str = "DUE"           # DUE | PARTIAL | PAID
+    status: str = "DUE"           # DUE | PARTIAL | PAID    # There should be a method to validate the ENUMS
 
 
 @dataclass
